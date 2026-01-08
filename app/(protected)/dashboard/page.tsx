@@ -7,8 +7,9 @@ import Link from "next/link";
 import AskQuestionCard from "./ask-question-card";
 import MeetingCard from "./meeting-card";
 import ArchiveButton from "./archive-button";
-import InviteButton from "./invite-button";
+const InviteButton = dynamic(() => import('./invite-button'),{ssr: false});
 import TeamMembers from "./team-members";
+import dynamic from "next/dynamic";
 
 export default function Dashboard() {
   const { project } = useProject();
