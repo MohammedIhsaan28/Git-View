@@ -32,8 +32,8 @@ export async function createCheckoutSession(credits:number){
         ],
         customer_creation: 'always',
         mode:'payment',
-        success_url: `${process.env.NEXT_PUBLIC_APP_URL}/create`,
-        cancel_url: `${process.env.NEXT_PUBLIC_APP_URL}/billing`,
+        success_url: `${process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_APP_URL_PROD : process.env.NEXT_PUBLIC_APP_URL}/create`,
+        cancel_url: `${process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_APP_URL_PROD : process.env.NEXT_PUBLIC_APP_URL}/billing`,
         client_reference_id: userId.toString(),
         metadata:{
             credits
