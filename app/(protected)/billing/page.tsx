@@ -6,6 +6,7 @@ import { Slider } from "@/components/ui/slider";
 import { createCheckoutSession } from "@/lib/stripe";
 import { Info } from "lucide-react";
 import { useState } from "react";
+import BillingCard from "./billing-card";
 
 export default function BillingPage(){
     
@@ -14,6 +15,8 @@ export default function BillingPage(){
     const creditsToByAmount = creditsToBuy[0]!
     const price = (creditsToByAmount /50).toFixed(2);
     return(
+
+        <>
         <div>
             <h1 className='text-xl font-semibold'>
             Billing
@@ -21,7 +24,7 @@ export default function BillingPage(){
             <div className="h-2">
 
             </div>
-            <p>You currently have {user?.credits || 'none'} credits</p>
+            <p>You currently have {user?.credits || '---'} credits</p>
 
             <div className="h-2"></div>
 
@@ -46,6 +49,10 @@ export default function BillingPage(){
             </Button>
             
         </div>
-        
+
+        <div>
+            <BillingCard/>
+        </div>
+        </>
     )
 }

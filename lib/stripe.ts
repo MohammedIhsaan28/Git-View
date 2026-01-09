@@ -13,9 +13,7 @@ export async function createCheckoutSession(credits:number){
 
     if(!userId){
         throw new Error('Unauthorized');
-
     }
-
     const session = await stripe.checkout.sessions.create({
         payment_method_types: ['card'],
         line_items: [
@@ -32,8 +30,8 @@ export async function createCheckoutSession(credits:number){
         ],
         customer_creation: 'always',
         mode:'payment',
-        success_url: `${process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_APP_URL_PROD : process.env.NEXT_PUBLIC_APP_URL}/create`,
-        cancel_url: `${process.env.NODE_ENV === 'production' ? process.env.NEXT_PUBLIC_APP_URL_PROD : process.env.NEXT_PUBLIC_APP_URL}/billing`,
+        success_url: `${process.env.NODE_ENV === 'development' ? process.env.NEXT_PUBLIC_APP_URL : process.env.NEXT_PUBLIC_APP_URL_PROD}/billing`,
+        cancel_url: `${process.env.NODE_ENV === 'development' ? process.env.NEXT_PUBLIC_APP_URL : process.env.NEXT_PUBLIC_APP_URL_PROD}/billing`,
         client_reference_id: userId.toString(),
         metadata:{
             credits
