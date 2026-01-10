@@ -14,6 +14,7 @@ import CodeReferences from "./code-references";
 import { trpc } from "@/app/_trpc/client";
 import { toast } from "sonner";
 import useRefetch from "@/hooks/use-refetch";
+import BgGradient from "@/components/ui/bgGradient";
 
 export default function AskQuestionCard() {
 
@@ -94,8 +95,10 @@ export default function AskQuestionCard() {
         </Dialog>
 
             <Card className="w-full rounded-md bg-white">
+                
                 <CardHeader className="p-2 px-4 mt-4">
                     <CardTitle className="px-4">
+                        
                         Ask Questions!
                     </CardTitle>
                 </CardHeader>

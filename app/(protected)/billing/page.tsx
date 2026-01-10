@@ -43,7 +43,8 @@ export default function BillingPage(){
             <Slider defaultValue={[100]} max={1000} min={10} step={10} onValueChange={value => setCreditsToBuy(value)}  value={creditsToBuy} />
             <div className="h-4"></div>
             <Button onClick={()=> {
-                createCheckoutSession(creditsToByAmount)
+                createCheckoutSession(creditsToByAmount);
+                
             }}>
                 Buy {creditsToByAmount} credits for ${price}
             </Button>

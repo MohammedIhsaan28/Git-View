@@ -52,7 +52,7 @@ export default function MeetingsPage() {
                             </div>
 
                             <div className="flex items-center text-xs text-gray-500 gap-x-2">
-                                <p className="whitespace-nowrap  border px-2 py-1 rounded-md shadow-sm text-black">{meeting.createdAt.slice(0,10)}</p>
+                                <p className="whitespace-nowrap  border px-2 py-1 rounded-md shadow-sm text-black">{new Date(meeting.createdAt).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'medium'})}</p>
                                 <p className="truncate ml-2 border px-2 py-1 rounded-md shadow-xs bg-yellow-300 text-black font-semibold">{meeting.issues.length} issues</p>
                                 {meeting.status === 'PROCESSING' && (
                                         <div className="flex items-center gap-2 bg-yellow-400">

@@ -1,5 +1,6 @@
 "use client";
 
+import BgGradient from "@/components/ui/bgGradient";
 import { Button } from "@/components/ui/button";
 import {
   Sidebar,

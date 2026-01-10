@@ -7,8 +7,7 @@ import AskQuestionCard from "../dashboard/ask-question-card";
 import React, { useState } from "react";
 import MDEditor from "@uiw/react-md-editor";
 import CodeReferences from "../dashboard/code-references";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+
 
 export default function QAPage(){
     const {projectId} = useProject();
@@ -41,7 +40,7 @@ export default function QAPage(){
                                                     Q. {question.question}
                                                 </p>
                                                 <span className="text-xs border rounded-md p-1 text-gray-400 whitespace-nowrap">
-                                                    {question.createdAt.slice(0,10)}
+                                                    {new Date(question.createdAt).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'medium'})}
                                                 </span>
 
                                             </div>

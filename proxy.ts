@@ -6,6 +6,7 @@ const isPublicRoute = createRouteMatcher([
   // Allow UploadThing handshake without middleware redirects; auth is enforced in the route itself
   '/api/uploadthing(.*)',
   '/api/webhook/stripe(.*)',
+
 ])
 
 export default clerkMiddleware(async (auth, req) => {

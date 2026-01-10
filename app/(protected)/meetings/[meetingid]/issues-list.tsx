@@ -30,7 +30,7 @@ export default function IssuesList({meetingId}: Props){
                         </div>
                         <h1>
                             <div className="text-xs leading-6 text-gray-600 ml-2">
-                                Meeting on {''}{meeting.createdAt.slice(0,10)}
+                                Meeting on {''}{new Date(meeting.createdAt).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'medium'})}
                             </div>
                             <div className="mt-1 ml-2  text-sm font-semibold leading-6 text-gray-600">
                                 {meeting.name}
@@ -68,7 +68,7 @@ function IssueCard({issue}:{issue: NonNullable<RouterOutputs["project"]["getMeet
                             {issue.gist}
                         </DialogTitle>
                         <DialogDescription className="text-primary">
-                            {issue.createdAt.slice(0,10)}
+                            {new Date(issue.createdAt).toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'medium'})}
                         </DialogDescription>
 
                         <p>{issue.headline}</p>
