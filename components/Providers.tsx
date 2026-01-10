@@ -11,7 +11,7 @@ export default function Providers({children}: PropsWithChildren) {
     const [trpcClient] = useState(()=> trpc.createClient({
         links:[
             httpBatchLink({
-                url:`${process.env.NODE_ENV==='development'?'http://localhost:3000':'https://gitview-2jkd.vercel.app'}/api/trpc`,
+                url:`${process.env.NODE_ENV==='development'?'http://localhost:3000':'https://git-view-2jkd.vercel.app'}/api/trpc`,
             })
         ]
     }));
