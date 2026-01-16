@@ -13,7 +13,7 @@ export default function BillingCard() {
     <div className="mt-4">
       <ul className="divide-y divide-gray-200">
         {transactions?.map((transaction) => (
-          <li key={transaction.id} className="flex items-center justify-between py-2 border shadow-md rounded-md bg-violet-100  mb-4 p-4 gap-x-6">
+          <li key={transaction.id} className="flex items-center justify-between py-2 border shadow-md rounded-md bg-white mb-4 p-4 gap-x-6">
             <div>
                 <div className="min-w-0">
                     <div className="flex items-center gap-2">

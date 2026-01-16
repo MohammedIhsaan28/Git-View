@@ -135,7 +135,7 @@ export default function MeetingCard() {
 
       {isUploading && (
         <div className="flex  flex-col items-center justify-center gap-4">
-          <CircularProgressbar value={progress} text={`${progress}%`} className="size-20"
+          <CircularProgressbar value={progress} text={`${progress}%`} className="size-20 text-center"
               styles={buildStyles({
                 pathColor: "#8B5CF6",
                 textColor: "#8B5CF6",

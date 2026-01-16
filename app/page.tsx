@@ -10,7 +10,6 @@ import BgGradient from "@/components/ui/bgGradient";
 export default function Home() {
 
  
-
   return (
     <div className="relative w-full">
       <BgGradient/>

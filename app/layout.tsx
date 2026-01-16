@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "GitView",
-  description: "",
+  description: "A better way to view Git repositories.",
 };
 
 export default function RootLayout({
